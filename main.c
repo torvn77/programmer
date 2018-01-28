@@ -101,6 +101,8 @@ add_job_item ( GtkButton *button, gpointer data )
 					);
 				mysql_query ( &mysql, query );
 
+				gtk_widget_hide ( (GtkWidget *) s->button_add_item );
+#if 0
 		if (s->button_add_item ) gtk_widget_destroy ( (GtkWidget *) s->button_add_item );
 		if (s->entry_total_percent ) gtk_widget_destroy ( (GtkWidget *) s->entry_total_percent );
 		if (s->total_percent ) gtk_widget_destroy ( (GtkWidget *) s->total_percent );
@@ -109,9 +111,10 @@ add_job_item ( GtkButton *button, gpointer data )
 		for ( int i = 0; i < 18; i++ ) {
 			gtk_widget_destroy ( s->punkts [ i ] );
 		}
+		if (s->window) gtk_widget_destroy ( (GtkWidget *) s->window );
+#endif
 		free ( s );
 		free ( query );
-		if (s->window) gtk_widget_destroy ( (GtkWidget *) s->window );
 
 }
 void
@@ -216,6 +219,7 @@ add_job ( GtkButton *button, gpointer data )
 		mysql_free_result ( res );
 		gtk_widget_hide ( (GtkWidget *) s->button_add_item );
 
+#if 0
 		gtk_widget_destroy ( (GtkWidget *) s->button_add_item );
 		gtk_widget_destroy ( (GtkWidget *) s->entry_total_percent );
 		gtk_widget_destroy ( (GtkWidget *) s->total_percent );
@@ -230,9 +234,10 @@ add_job ( GtkButton *button, gpointer data )
 		for ( int i = 0; i < 18; i++ ) {
 			gtk_widget_destroy ( s->punkts [ i ] );
 		}
+		gtk_widget_destroy ( (GtkWidget *) s->window );
+#endif
 		free ( s );
 		free ( query );
-		gtk_widget_destroy ( (GtkWidget *) s->window );
 
 }
 

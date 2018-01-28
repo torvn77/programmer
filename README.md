@@ -16,3 +16,5 @@
 Пожертвования можно присылать на yandex-кошелек: 410012852537711
 
 ![](http://s1.uploadpics.ru/images/b1UcMo93fm.png)
+![](http://s1.uploadpics.ru/images/b1vxajo2M7.png)
+![](http://s1.uploadpics.ru/images/b1Gg0io2Mm.png)
