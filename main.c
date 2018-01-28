@@ -1083,7 +1083,7 @@ init_mysql_db ( )
 {
 	mysql_init ( &mysql );
 	if ( mysql_real_connect ( &mysql, "localhost",
-			"prog",
+			"programmer",
 			"programmer",
 			"programmer",
 			0,
